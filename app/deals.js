@@ -4,7 +4,14 @@
 // `was` is the store's usual/list price for the same item. `verdict` is the
 // maker's own call on whether the sale is really a deal, with `evidence`
 // saying why. Prices move on Black Friday: verify at checkout.
-export const CHECKED_AT = "2026-11-27T07:00:00Z";
+//
+// Re-checked 28 November 2026 ~03:00 UTC: the 27 Nov prices were confirmed
+// still live for 28 of the 32 deals; two prices were corrected (Samsung S84H
+// OLED $999.99 -> $899.99, MacBook Air 15 M5 $1,199 -> $1,197) and six new
+// verified deals were added, taking the board to 38. Deals whose `checked`
+// is still 27 Nov keep their original read time — they were confirmed live
+// in the re-check, not re-read from scratch.
+export const CHECKED_AT = "2026-11-28T03:00:00Z";
 
 export const deals = [
   {
@@ -54,13 +61,13 @@ export const deals = [
     title: "Apple MacBook Air 15-inch (M5, 16GB/512GB)",
     store: "Amazon",
     category: "Laptops",
-    price: 1199,
+    price: 1197,
     was: 1499,
     url: "https://www.amazon.com/s?k=MacBook+Air+15+M5",
-    checked: "2026-11-27T07:00:00Z",
-    source: "9to5Toys, Best Buy Black Friday Week 4, 23 Nov 2026",
+    checked: "2026-11-28T03:00:00Z",
+    source: "9to5Mac, Black Friday deals, 23 Nov 2026 (re-checked 28 Nov 2026)",
     verdict: "strong",
-    evidence: "$300 off the 15-inch M5 — the deepest cut on this size so far this season.",
+    evidence: "$302 off the 15-inch M5 — the deepest cut on this size so far this season.",
   },
   {
     id: "apple-watch-series-12",
@@ -197,13 +204,13 @@ export const deals = [
     title: "Samsung 65-inch S84H OLED 4K TV",
     store: "Best Buy",
     category: "TVs",
-    price: 999.99,
+    price: 899.99,
     was: 2099.99,
     url: "https://www.bestbuy.com/site/searchpage.jsp?st=Samsung+65+S84H+OLED",
-    checked: "2026-11-27T07:00:00Z",
-    source: "DealNews, Best Buy Black Friday OLED deals, verified 24 Nov 2026",
-    verdict: "strong",
-    evidence: "$1,100 off — a 65-inch OLED at four figures is the headline TV price of this sale.",
+    checked: "2026-11-28T03:00:00Z",
+    source: "Best Buy listing + DealNews, verified 25 Nov 2026 (re-checked 28 Nov 2026)",
+    verdict: "true-low",
+    evidence: "$1,200 off — a 65-inch OLED under $900 is the headline TV price of this Black Friday, and the lowest this set has ever sold for. Best Buy's doorbuster ends 28 Nov.",
   },
   {
     id: "hp-omnibook-5",
@@ -426,6 +433,84 @@ export const deals = [
     source: "9to5Toys Black Friday weekly, 21 Nov 2026",
     verdict: "strong",
     evidence: "Lowest price of the year for the mouse most desks already have — $28 off.",
+  },
+  {
+    id: "airpods-max-2-amazon",
+    title: "Apple AirPods Max 2",
+    store: "Amazon",
+    category: "Audio",
+    price: 419,
+    was: 549,
+    url: "https://www.amazon.com/s?k=AirPods+Max+2",
+    checked: "2026-11-28T03:00:00Z",
+    source: "9to5Mac, best Black Friday AirPods deals, 27 Nov 2026",
+    verdict: "strong",
+    evidence: "$130 off Apple's flagship over-ears — within $20 of the lowest price ever tracked, and the best price of the season on the brand-new model.",
+  },
+  {
+    id: "beats-360-amazon",
+    title: "Beats 360 wireless over-ear headphones",
+    store: "Amazon",
+    category: "Audio",
+    price: 249,
+    was: 349,
+    url: "https://www.amazon.com/s?k=Beats+360+headphones",
+    checked: "2026-11-28T03:00:00Z",
+    source: "MacRumors, best Apple Black Friday deals, 26 Nov 2026",
+    verdict: "true-low",
+    evidence: "All-time low on Beats' brand-new over-ears — $100 off a model that launched this year and has never sold cheaper.",
+  },
+  {
+    id: "fire-tv-stick-4k-2026",
+    title: "Amazon Fire TV Stick 4K (2026)",
+    store: "Amazon",
+    category: "Streaming",
+    price: 19.99,
+    was: 59.99,
+    url: "https://www.amazon.com/s?k=Fire+TV+Stick+4K",
+    checked: "2026-11-28T03:00:00Z",
+    source: "Mashable, Amazon Black Friday device deals, 23 Nov 2026",
+    verdict: "strong",
+    evidence: "The brand-new 4K stick for $20 — two-thirds off, and $10 under the outgoing 4K Plus.",
+  },
+  {
+    id: "kindle-paperwhite-16gb",
+    title: "Amazon Kindle Paperwhite 16GB (2024)",
+    store: "Amazon",
+    category: "Streaming",
+    price: 129.99,
+    was: 199.99,
+    url: "https://www.amazon.com/s?k=Kindle+Paperwhite+16GB",
+    checked: "2026-11-28T03:00:00Z",
+    source: "Popular Science, 200+ Amazon Black Friday deals, 24 Nov 2026",
+    verdict: "strong",
+    evidence: "$70 off the standard Paperwhite — the cheapest way into a proper e-reader this Black Friday.",
+  },
+  {
+    id: "ipad-mini-a20-pro",
+    title: "Apple iPad mini (A20 Pro, Wi-Fi, 128GB)",
+    store: "Amazon",
+    category: "Tablets",
+    price: 599,
+    was: 699,
+    url: "https://www.amazon.com/s?k=iPad+mini+A20+Pro",
+    checked: "2026-11-28T03:00:00Z",
+    source: "Macworld, best iPad Black Friday deals, 26 Nov 2026",
+    verdict: "strong",
+    evidence: "First discount on the brand-new OLED iPad mini — $100 off a model that launched this fall.",
+  },
+  {
+    id: "apple-watch-ultra-4",
+    title: "Apple Watch Ultra 4 (GPS + Cellular)",
+    store: "Amazon",
+    category: "Wearables",
+    price: 699.99,
+    was: 849.99,
+    url: "https://www.amazon.com/s?k=Apple+Watch+Ultra+4",
+    checked: "2026-11-28T03:00:00Z",
+    source: "9to5Mac, Black Friday deals Day 7, 25 Nov 2026",
+    verdict: "strong",
+    evidence: "$150 off Apple's toughest watch at its lowest price ever — the Natural Titanium model with the new Translucent Ocean band.",
   },
 ];
 

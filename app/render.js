@@ -85,7 +85,7 @@ export function listPage(state, shown, total) {
       : `<div class="grid">${shown.map(dealCard).join("")}</div>`;
   return `<h1>Black Friday deals, checked today</h1>
 <p class="lede">${total} real deals from Amazon, Best Buy, Walmart and Target — every price read by hand on
-27 November 2026, with an honest call on whether each one is really a deal.</p>
+27–28 November 2026, with an honest call on whether each one is really a deal.</p>
 ${controlBar(state, shown.length)}
 ${body}`;
 }
