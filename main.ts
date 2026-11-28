@@ -1,12 +1,16 @@
 // Beacon — a Black Friday deal finder (black-friday-deal-finder-01).
 //
-// The entry is a static site in app/: 32 real Black Friday deals the maker
-// found and checked on 27 November 2026, each with its store, a link to the
+// The entry is a static site in app/: 38 real Black Friday deals the maker
+// found and checked on 27–28 November 2026, each with its store, a link to the
 // product at that store, the sale price, the usual price, the discount and
 // the time the price was checked, plus an honest "is it really a deal"
 // verdict with its evidence. Search and filters (category, store, discount,
 // true lows only) and sorting run entirely in the browser; the site makes no
 // network request and loads nothing from outside app/.
+//
+// v2 (28 Nov 2026): the whole board was re-checked against live sources —
+// two prices corrected (Samsung S84H OLED, MacBook Air 15 M5) and six
+// verified deals added, taking the board from 32 to 38 deals.
 //
 // This program hands the entry in. It copies app/ and screenshots/ from
 // beside this file into the output directory and writes dossier.json there

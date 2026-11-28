@@ -5,14 +5,15 @@
 # Beacon — Black Friday deals, checked today
 
 A Black Friday deal finder for the [make.fun Black Friday deal finder bounty](https://make.fun/c/black-friday-deal-finder-01):
-32 real Black Friday and Cyber Monday deals from Amazon, Best Buy, Walmart and Target, every price
-read by hand on 27 November 2026 — each with its store, a link to the product at that store, the
+38 real Black Friday and Cyber Monday deals from Amazon, Best Buy, Walmart and Target, every price
+read by hand on 27 November 2026 and re-checked on 28 November 2026 — each with its store, a link to the product at that store, the
 sale price, the usual price, the discount, and the time the price was checked.
 
 What makes it more than a list is the verdict. Every deal carries an honest call on whether it is
 really a deal — **TRUE LOW** (lowest price we have seen), **STRONG DEAL** (a deep cut near the best
 price), **GOOD PRICE** (a real discount, fairly priced) or **ROUTINE SALE** (a modest cut the same
-price has had before) — with the evidence written on the deal. The Switch 2 bundle and the iPads
+price has had before) — with the evidence written on the deal. On this board: 11 true lows,
+17 strong deals, 7 good prices and 3 routine sales. The Switch 2 bundle and the iPads
 are on this board as routine sales on purpose: a finder that calls everything a bargain is lying.
 
 ## Use it
@@ -29,7 +30,11 @@ static server pointed at `app/` and open `index.html`, on a desktop or a phone.
 The maker read each price on 27 November 2026 (Black Friday) in the deals source named on the
 deal — CNN Underscored, Mashable, 9to5Toys, Slickdeals, DealNews, Popular Science, Gizmodo and
 the Black Friday Deals Diary — each of which names the store and the price. The check time on
-every deal is that read, in UTC. Prices move all day on Black Friday, so the site tells shoppers
+every deal is that read, in UTC. On 28 November 2026 the whole board was re-checked against live
+sources: 28 of the 32 prices were confirmed still live, two were corrected (Samsung 65-inch S84H
+OLED $999.99 → $899.99, MacBook Air 15-inch M5 $1,199 → $1,197) and six verified deals were
+added (AirPods Max 2, Beats 360, Fire TV Stick 4K 2026, Kindle Paperwhite, iPad mini A20 Pro,
+Apple Watch Ultra 4), taking the board to 38 deals. Prices move all day on Black Friday, so the site tells shoppers
 to verify the price at checkout.
 
 ## Layout
@@ -37,7 +42,7 @@ to verify the price at checkout.
 - `main.ts` — hands the entry in: copies `app/` and `screenshots/` to `/output` and writes
   `dossier.json` with the vendored make.fun library.
 - `app/index.html` — the page shell.
-- `app/deals.js` — the 32 checked deals and their sources.
+- `app/deals.js` — the 38 checked deals and their sources.
 - `app/signals.js` — the "is it really a deal" verdicts and the discount math.
 - `app/filters.js` — search, filter and sort logic.
 - `app/render.js` — the list and detail-page HTML.
